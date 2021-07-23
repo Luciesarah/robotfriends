@@ -1,0 +1,279 @@
+body {
+	background-image: linear-gradient(blue, green);
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	color: whitesmoke;
+	margin-top: 50px;
+	text-shadow: 01px 01px rgba(0, 0, 0, 0.6);
+}
+
+.robots {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+}
+
+.android,
+.androidgirl {
+	margin: 20px 50px;
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #5f93e8;
+	 box-shadow: 01px 01px rgba(0, 0, 0, 0.6);
+}
+
+.head_g, 
+.left_arm_g, 
+.torso_g, 
+.right_arm_g, 
+.left_leg_g, 
+.right_leg_g {
+	background-color: hotpink;
+	box-shadow: 01px 01px rgba(0, 0, 0, 0.6);
+}
+
+.head, 
+.head_g { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes,
+.eyes_g {
+	display: flex
+}
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.head_g:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body, 
+.upper_body_g { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+} 
+
+.left_arm, .right_arm, 
+.left_arm_g, .right_arm_g { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm, 
+.left_arm_g { 
+	margin-right: 10px; 
+} 
+
+.right_arm, 
+.right_arm_g { 
+	margin-left: 10px; 
+} 
+
+.torso,
+.torso_g { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px;
+	z-index: 1;
+} 
+
+.lower_body, 
+.lower_body_g { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+	display: flex; 
+} 
+
+.left_leg, .right_leg,
+.left_leg_g, .right_leg_g { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg,
+.left_leg_g { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover, 
+.left_leg_g:hover {
+    transform: rotate(20deg);
+}
+
+.right_leg,
+.right_leg_g { 
+	margin-left: 30px; 
+}
+
+.left_eye, .right_eye, 
+.left_eye_g, .right_eye_g { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+.left_eye, 
+.left_eye_g { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye,
+.right_eye_g { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}
+
+.left_eye, 
+.right_eye {
+    transform: translateX(15px) scale(1.5);
+}
+
+/*.....................
+original code here:
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.robots {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #5f93e8;
+}
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes {
+	display: flex
+}
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+
+.right_arm { 
+	margin-left: 10px; 
+} 
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+/*	margin: 0 auto;
+	display: flex; 
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg { 
+	margin-left: 30px; 
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+/*	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}*/
+
+
+
+
